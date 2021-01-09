@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Practica Portfolio V2
+Conceptos Practicados: implementacion de React & Material UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
