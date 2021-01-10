@@ -1,5 +1,5 @@
 body {
-  background: url(./images/matrixBG.jpg);
+  background: url(./images/matrixBG.jpg) ;
   -webkit-background: cover ;
   -moz-background: cover ;
   -o-background: cover ;
@@ -7,4 +7,5 @@ body {
   background-repeat: no-repeat; 
   background-size: cover; 
   background-attachment: fixed;
+  
 }
