@@ -46,7 +46,7 @@ export const Portfolio = () => {
             <Navbar />
             <Grid container justify="center" >
                 {/* PROJECT 1 */}
-                <Grid item xs={12} sm={8} md={6} lg={4} >
+                <Grid item xs={12} sm={6} md={6} lg={4} >
                 <Card className={classes.cardContainer} > 
                 <CardActionArea>
                     <CardMedia 
@@ -75,7 +75,7 @@ export const Portfolio = () => {
                </Card>      
                 </Grid>
                 {/* PROJECT 2 */}
-                <Grid item xs={12} sm={8} md={6} lg={4} >
+                <Grid item xs={12} sm={6} md={6} lg={4} >
                 <Card className={classes.cardContainer} > 
                 <CardActionArea>
                     <CardMedia 
@@ -104,7 +104,7 @@ export const Portfolio = () => {
                </Card>      
                 </Grid>
                 {/* PROJECT 3 */}
-                <Grid item xs={12} sm={8} md={6} lg={4} >
+                <Grid item xs={12} sm={6} md={6} lg={4} >
                 <Card className={classes.cardContainer} > 
                 <CardActionArea>
                     <CardMedia 
@@ -133,7 +133,7 @@ export const Portfolio = () => {
                </Card>      
                 </Grid>
                  {/* PROJECT 4 */}
-                 <Grid item xs={12} sm={8} md={6} lg={4} >
+                 <Grid item xs={12} sm={6} md={6} lg={4} >
                 <Card className={classes.cardContainer} > 
                 <CardActionArea>
                     <CardMedia 
