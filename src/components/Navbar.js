@@ -26,12 +26,13 @@ import {
 } from "@material-ui/icons";
 import { makeStyles } from '@material-ui/core/styles';
 import logo from "../images/Logo500px.jpg";
+import { Footer } from './Footer';
 
 //CSS STYLES
 const useStyles = makeStyles(theme => ({
     
     menuSliderContainer: {
-        width: 250,
+        width: 320,
         background: "#004d40",
         height: "100%"
     },
@@ -122,6 +123,7 @@ export const Navbar = () => {
                         onClose={ toggleSlider("right", false) }
                         >
                         { sideList("right") }
+                        <Footer />
                     </MobilRightMenuSlider>
                 </Toolbar>
             </AppBar>
