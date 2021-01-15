@@ -11,7 +11,7 @@ import {
 import { Navbar } from './Navbar';
 
 const useStyles = makeStyles(theme => ({
-    
+        
     form : {
         top:" 50%",
         left: "50%",
@@ -88,9 +88,7 @@ export const Contacts = () => {
                         <InputFile 
                         fullWidth={true} 
                         label="Message" 
-                        variant="outlined"
-                        multiline
-                        rowsMax={4}
+                        variant="outlined"                        
                         inputProps={{ style: { color: "white" } }}
                         margin="dense"
                         size="medium"

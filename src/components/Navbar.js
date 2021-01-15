@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     
     menuSliderContainer: {
         width: 320,
-        background: "#004d40",
+        background: "#1E1E21",
         height: "100%"
     },
     avatar: {
@@ -46,7 +46,12 @@ const useStyles = makeStyles(theme => ({
     //color de los iconos y textos
     ListItem: {
         color: "#e1f5fe"
-    }
+    },
+    title: {
+        flexGrow: 1,
+        textAlign: 'center',
+        
+      }
 }));
 
 const menuItems = [
@@ -95,7 +100,7 @@ export const Navbar = () => {
             <List>
                 {menuItems.map((lsItem, key) => (
                     <ListItem button key={key} component={Link} to={lsItem.listPath} >
-                    <ListItemIcon className={ classes.ListItem } >{ lsItem.listIcon }</ListItemIcon>
+                    <ListItemIcon style={{color: "#ECCB0E"}} className={ classes.ListItem } >{ lsItem.listIcon }</ListItemIcon>
                     <ListItemText className={ classes.ListItem } primary={ lsItem.listText } />
                 </ListItem>
                 )) }
@@ -109,14 +114,17 @@ export const Navbar = () => {
     return (
         <>        
         <Box component="nav" >
-            <AppBar position="static" style={{ background: "#222" }} >
+            <AppBar position="static" style={{ background: "#1E1E21" }} >
                 <Toolbar>
                     <IconButton onClick={ toggleSlider("right", true) } >
-                       <ArrowBack style={{ color: "green" }} />
+                       <ArrowBack style={{ color: "#ECCB0E" }} />
                     </IconButton>
-                    <Typography variant="h5" style={{ color: "green" }} >
-                        Mi Portfolio V.2
+                    <Typography  variant="h5" onClick={ toggleSlider("right", true) } style={{ color: "white" }} >
+                        Menu
                     </Typography>
+                    <Typography className={classes.title} variant="h5" style={{ color: "#ECCB0E" }} >
+                         Resume Luis Chilo V.2
+                     </Typography>
                     <MobilRightMenuSlider 
                         anchor="right" 
                         open={state.right} 

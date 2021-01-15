@@ -16,11 +16,12 @@ const useStyles = makeStyles({
         "& .MuiBottomNavigationAction-root": {
             minWidth: 0,
             maxWidth: 250,
+            
         },
         "& .MuiSvgIcon-root": {
-            fill: "tan",
+            fill: "white",
             "&:hover": {
-                fill: "tomato",
+                fill: "#ECCB0E",
                 fontSize: "1.8rem"
                 
             }}}
