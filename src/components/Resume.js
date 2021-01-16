@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
             content: "''",
             position: "absolute",
             height: "100%",
-            border: "1px solid tan",
+            border: "1px solid #ECCB0E",
+            boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
             right: "40px",
             top: 0
         },
@@ -107,7 +108,7 @@ const useStyles = makeStyles(theme => ({
 
     },
     heading: {
-        color: "#ECCB0E",
+        color: "#15D3C9",
         padding: "3rem 0",
         textTransform: "uppercase"
     },
