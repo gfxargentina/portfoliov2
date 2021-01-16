@@ -55,15 +55,17 @@ const InputFile = withStyles({
 export const Contacts = () => {
 
     const classes = useStyles();
-
+    
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
         if ( window.location.search.includes('success=true') ) {
-         setSuccess(true);
+            setSuccess(true);
             }
         }, []);
 
+
+    
     return (
         <Box component="div" style={{ background: "#233", height: "100vh" }}>
             <Navbar />
@@ -71,12 +73,13 @@ export const Contacts = () => {
             {success && (
                 <p style={{ color: "green" }}>Thanks for your message! </p>
                 )}
+            
                 <Box 
                     component="form" 
                     className={classes.form} 
                     name="contact"
                     method="POST"
-                    action="/contact/?success=true"
+                    action="/sucess/?success=true"
                     data-netlify="true"
                     >
                     <input type="hidden" name="form-name" value="contact" />
