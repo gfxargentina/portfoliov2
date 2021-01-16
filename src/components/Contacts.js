@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {
     Typography,
@@ -56,11 +56,30 @@ export const Contacts = () => {
 
     const classes = useStyles();
 
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        if ( window.location.search.includes('success=true') ) {
+         setSuccess(true);
+            }
+        }, []);
+
     return (
         <Box component="div" style={{ background: "#233", height: "100vh" }}>
             <Navbar />
             <Grid container justify="center" >
-                <Box component="form" className={classes.form} >
+            {success && (
+                <p style={{ color: "green" }}>Thanks for your message! </p>
+                )}
+                <Box 
+                    component="form" 
+                    className={classes.form} 
+                    name="contact"
+                    method="POST"
+                    action="/contact/?success=true"
+                    data-netlify="true"
+                    >
+                    <input type="hidden" name="form-name" value="contact" />
                     <Typography 
                         variant="h5"
                         style={{color: "tomato", textAlign: "center", textTransform: "uppercase"}}
@@ -74,6 +93,7 @@ export const Contacts = () => {
                         inputProps={{ style: { color: "white" } }}
                         margin="dense"
                         size="medium"
+                        name="name"
                         />
                         <br/>
                         <InputFile 
@@ -83,6 +103,7 @@ export const Contacts = () => {
                         inputProps={{ style: { color: "white" } }}
                         margin="dense"
                         size="medium"
+                        name="email"
                         />
                         <br/>
                         <InputFile 
@@ -92,6 +113,7 @@ export const Contacts = () => {
                         inputProps={{ style: { color: "white" } }}
                         margin="dense"
                         size="medium"
+                        name="message"
                         />
                         <br/>
                         <Button 
@@ -99,6 +121,7 @@ export const Contacts = () => {
                             variant="outlined" 
                             fullWidth={true}
                             endIcon={<SendIcon />}
+                            type="submit"
                              >
                             Contact me 
                         </Button>
